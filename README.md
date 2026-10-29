@@ -49,5 +49,3 @@ Trong kịch bản ngắt WAN5, quan sát trên R1 cho thấy metric đến `192
 | `PORT_MAPPING.csv` | Ánh xạ cổng LAN/WAN và đầu DCE |
 | `T01_T14_RESULTS.csv` | Kết quả 14 phép kiểm tra |
 | `README.md` | Mô tả mô hình và thành phần dự án |
-
-**Báo cáo PDF được chuẩn bị và nộp riêng**, trình bày quy trình triển khai, ảnh minh chứng, phân tích sự cố, phần Problem Solving và các câu hỏi Interview theo yêu cầu của bài thực hành.
