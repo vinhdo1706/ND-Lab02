@@ -1,0 +1,10 @@
+enable
+configure terminal
+hostname SW4
+interface Vlan1
+ip address 192.168.4.2 255.255.255.0
+no shutdown
+exit
+ip default-gateway 192.168.4.1
+end
+write memory

@@ -1,0 +1,10 @@
+enable
+configure terminal
+hostname SW2
+interface Vlan1
+ip address 192.168.2.2 255.255.255.0
+no shutdown
+exit
+ip default-gateway 192.168.2.1
+end
+write memory

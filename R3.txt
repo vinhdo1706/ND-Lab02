@@ -1,0 +1,32 @@
+enable
+configure terminal
+hostname R3
+interface FastEthernet0/0
+description LAN2_TO_SW2
+ip address 192.168.2.1 255.255.255.0
+no shutdown
+exit
+interface Serial0/0/0
+description WAN3_TO_R2
+ip address 10.0.3.2 255.255.255.0
+no shutdown
+exit
+interface Serial0/0/1
+description WAN5_TO_R1
+ip address 10.0.5.2 255.255.255.0
+no shutdown
+exit
+interface Serial0/1/0
+description WAN4_TO_R4
+ip address 10.0.4.2 255.255.255.0
+no shutdown
+exit
+router ospf 1
+router-id 3.3.3.3
+network 192.168.2.0 0.0.0.255 area 0
+network 10.0.3.0 0.0.0.255 area 0
+network 10.0.5.0 0.0.0.255 area 0
+network 10.0.4.0 0.0.0.255 area 0
+passive-interface FastEthernet0/0
+end
+write memory

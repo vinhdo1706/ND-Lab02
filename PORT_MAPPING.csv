@@ -1,0 +1,20 @@
+﻿Phân đoạn,Mạng IPv4,Thiết bị A,Cổng A,Địa chỉ IPv4 A,Thiết bị B,Cổng B,IPv4 B (hoặc SVI quản trị),Đầu DCE,Trạng thái kiểm tra,Ghi chú kỹ thuật
+WAN1,10.0.1.0/24,R1,Serial0/0/0,10.0.1.1,R2,Serial0/0/0,10.0.1.2,R1 Serial0/0/0,Up/up; OSPF FULL,Đầu DCE được đối chiếu bằng show controllers serial.
+WAN2,10.0.2.0/24,R1,Serial0/0/1,10.0.2.1,R4,Serial0/0/0,10.0.2.2,R1 Serial0/0/1,Up/up; OSPF FULL,Đầu DCE được đối chiếu bằng show controllers serial.
+WAN3,10.0.3.0/24,R2,Serial0/0/1,10.0.3.1,R3,Serial0/0/0,10.0.3.2,R2 Serial0/0/1,Up/up; OSPF FULL,Đầu DCE được đối chiếu bằng show controllers serial.
+WAN4,10.0.4.0/24,R4,Serial0/0/1,10.0.4.1,R3,Serial0/1/0,10.0.4.2,R4 Serial0/0/1,Up/up; OSPF FULL,Đầu DCE được đối chiếu bằng show controllers serial.
+WAN5,10.0.5.0/24,R1,Serial0/1/0,10.0.5.1,R3,Serial0/0/1,10.0.5.2,R1 Serial0/1/0,Up/up; OSPF FULL,Đã ngắt và khôi phục để thử OSPF failover; trạng thái ghi nhận sau khi phục hồi.
+LAN1,192.168.1.0/24,R1,FastEthernet0/0,192.168.1.1,SW1,FastEthernet0/1,192.168.1.2,,Liên kết Ethernet hoạt động,"IPv4 quản trị switch thuộc interface Vlan1 (SVI), không gán trực tiếp trên FastEthernet0/1."
+LAN2,192.168.2.0/24,R3,FastEthernet0/0,192.168.2.1,SW2,FastEthernet0/1,192.168.2.2,,Liên kết Ethernet hoạt động,"IPv4 quản trị switch thuộc interface Vlan1 (SVI), không gán trực tiếp trên FastEthernet0/1."
+LAN3,192.168.3.0/24,R4,FastEthernet0/0,192.168.3.1,SW3,FastEthernet0/1,192.168.3.2,,Liên kết Ethernet hoạt động,"IPv4 quản trị switch thuộc interface Vlan1 (SVI), không gán trực tiếp trên FastEthernet0/1."
+LAN4,192.168.4.0/24,R4,FastEthernet0/1,192.168.4.1,SW4,FastEthernet0/1,192.168.4.2,,Liên kết Ethernet hoạt động,"IPv4 quản trị switch thuộc interface Vlan1 (SVI), không gán trực tiếp trên FastEthernet0/1."
+LAN1,192.168.1.0/24,SW1,FastEthernet0/2,,PC0,FastEthernet0,192.168.1.10,,Liên kết Ethernet hoạt động,PC cấu hình tĩnh /24; default gateway 192.168.1.1.
+LAN1,192.168.1.0/24,SW1,FastEthernet0/3,,PC1,FastEthernet0,192.168.1.11,,Liên kết Ethernet hoạt động,PC cấu hình tĩnh /24; default gateway 192.168.1.1.
+LAN1,192.168.1.0/24,SW1,FastEthernet0/4,,PC2,FastEthernet0,192.168.1.12,,Liên kết Ethernet hoạt động,PC cấu hình tĩnh /24; default gateway 192.168.1.1.
+LAN2,192.168.2.0/24,SW2,FastEthernet0/2,,PC3,FastEthernet0,192.168.2.10,,Liên kết Ethernet hoạt động,PC cấu hình tĩnh /24; default gateway 192.168.2.1.
+LAN2,192.168.2.0/24,SW2,FastEthernet0/3,,PC4,FastEthernet0,192.168.2.11,,Liên kết Ethernet hoạt động,PC cấu hình tĩnh /24; default gateway 192.168.2.1.
+LAN2,192.168.2.0/24,SW2,FastEthernet0/4,,PC5,FastEthernet0,192.168.2.12,,Liên kết Ethernet hoạt động,PC cấu hình tĩnh /24; default gateway 192.168.2.1.
+LAN3,192.168.3.0/24,SW3,FastEthernet0/2,,PC6,FastEthernet0,192.168.3.10,,Liên kết Ethernet hoạt động,PC cấu hình tĩnh /24; default gateway 192.168.3.1.
+LAN3,192.168.3.0/24,SW3,FastEthernet0/3,,PC7,FastEthernet0,192.168.3.11,,Liên kết Ethernet hoạt động,PC cấu hình tĩnh /24; default gateway 192.168.3.1.
+LAN4,192.168.4.0/24,SW4,FastEthernet0/2,,PC8,FastEthernet0,192.168.4.10,,Liên kết Ethernet hoạt động,PC cấu hình tĩnh /24; default gateway 192.168.4.1.
+LAN4,192.168.4.0/24,SW4,FastEthernet0/3,,PC9,FastEthernet0,192.168.4.11,,Liên kết Ethernet hoạt động,PC cấu hình tĩnh /24; default gateway 192.168.4.1.
